@@ -1,7 +1,7 @@
 package lk.ijse.bookWormLibraryManagementSystem;
 
-public class Main {
+public class AppInitializerWrapper {
     public static void main(String[] args) {
-
+        AppInitializer.main(args);
     }
 }

@@ -1,0 +1,23 @@
+#branchesPane{
+    -fx-background-color: #191BA9;
+}
+#branchesSubPane{
+    -fx-background-color: #3c3939;
+}
+#txtbId,#txtName,#txtLocastion{
+    -fx-background-color:transparent;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 2px;
+}
+#btnUpdate,#btnDelete,#btnSave{
+    -fx-background-color: #808080;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+#btnUpdate:hover,#btnDelete:hover,#btnSave:hover{
+    -fx-effect:  dropshadow(three-pass-box, rgb(0, 0, 0),10,0,0,0);
+}
+#tblMain{
+    -fx-background-color: #f7f3f3;
+}

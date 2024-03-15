@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="branchesPane" prefHeight="684.0" prefWidth="751.0" stylesheets="@../assests/style/branches.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.bookWormLibraryManagementSystem.controller.BranchesFormController">
+   <children>
+      <AnchorPane fx:id="branchesSubPane" layoutX="15.0" layoutY="17.0" prefHeight="650.0" prefWidth="722.0" style="-fx-background-radius: 10;" stylesheets="@../assests/style/branches.css">
+         <children>
+            <TextField fx:id="txtbId" layoutX="169.0" layoutY="81.0" prefHeight="26.0" prefWidth="354.0" promptText="BRANCH ID" style="-fx-text-fill: white;" />
+            <TextField fx:id="txtName" layoutX="169.0" layoutY="124.0" prefHeight="26.0" prefWidth="354.0" promptText="BRANCH NAME" style="-fx-text-fill: white;" />
+            <TextField fx:id="txtLocastion" layoutX="169.0" layoutY="176.0" prefHeight="26.0" prefWidth="354.0" promptText="BRANCH LOCATION" style="-fx-text-fill: white;" />
+            <ComboBox fx:id="cmbStatus" layoutX="169.0" layoutY="220.0" prefHeight="32.0" prefWidth="150.0" promptText="SATAUS" />
+            <Button fx:id="btnSave" layoutX="207.0" layoutY="273.0" mnemonicParsing="false" onAction="#save_OnAction" prefHeight="15.0" prefWidth="77.0" text="SAVE" textFill="#eeeded" />
+            <Button fx:id="btnUpdate" layoutX="307.0" layoutY="273.0" mnemonicParsing="false" onAction="#update_OnAction" prefHeight="15.0" prefWidth="77.0" text="UPDATE" textFill="#e4e3e3" />
+            <Button fx:id="btnDelete" layoutX="407.0" layoutY="273.0" mnemonicParsing="false" onAction="#delete_OnAction" prefHeight="15.0" prefWidth="77.0" text="DELETE" textFill="#f5f4f4" />
+            <TableView fx:id="tblMain" layoutX="14.0" layoutY="329.0" prefHeight="307.0" prefWidth="695.0">
+              <columns>
+                <TableColumn fx:id="tblId" prefWidth="145.0" text="BID" />
+                <TableColumn fx:id="tblNmae" prefWidth="188.0" text="NAME" />
+                  <TableColumn fx:id="tblLocation" prefWidth="165.0" text="LOCATION" />
+                  <TableColumn fx:id="tblStatus" prefWidth="195.0" text="SATAUS" />
+              </columns>
+            </TableView>
+            <Label layoutX="292.0" layoutY="20.0" text="BRANCHES" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

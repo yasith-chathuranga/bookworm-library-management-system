@@ -1,0 +1,23 @@
+#root{
+    -fx-background-color: #191BA9;
+}
+#adminRoot{
+    -fx-background-color: #3c3939;
+}
+#btnConform{
+    -fx-background-color: #808080;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+#btnConform:hover{
+    -fx-effect:  dropshadow(three-pass-box, rgb(0, 0, 0),10,0,0,0);
+}
+#txtName,#txtPassword{
+    -fx-background-color:transparent;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 2px;
+}
+#txtName,#txtPassword{
+    -fx-border-color: transparent transparent black transparent;
+}

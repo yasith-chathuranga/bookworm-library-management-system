@@ -1,0 +1,26 @@
+#txtID,#txtTitle,#txtAuthor,#txtGenre{
+    -fx-background-color:transparent;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 2px;
+}
+#txtID,#txtTitle,#txtAuthor,#txtGenre{
+    -fx-border-color: transparent transparent black transparent;
+}
+#btnSave,#btnUpdate,#btnDelete{
+    -fx-background-color: #808080;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+#btnSave:hover,#btnDelete:hover,#btnUpdate:hover{
+    -fx-effect:  dropshadow(three-pass-box, rgb(0, 0, 0),10,0,0,0);
+}
+#bookPane{
+    -fx-background-color: #191ba9;
+}
+#bookSubPane{
+    -fx-background-color: #3c3939;
+}
+#tblLMainBook{
+    -fx-background-color: #f7f3f3;
+}

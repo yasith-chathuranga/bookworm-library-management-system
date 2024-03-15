@@ -1,0 +1,18 @@
+#detailPane{
+    -fx-background-color: #191BA9;
+}
+#detailSubPane{
+    -fx-background-color: #3c3939;
+}
+#btnupdate,#btndelete,#btnsave{
+    -fx-background-color: #808080;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+#btnupdate:hover,#btndelete:hover,#btnsave:hover{
+    -fx-effect:  dropshadow(three-pass-box, rgb(0, 0, 0),10,0,0,0);
+}
+#tblMian{
+    -fx-background-color: #f7f3f3;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailPane" prefHeight="684.0" prefWidth="751.0" stylesheets="@../assests/style/detail.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.bookWormLibraryManagementSystem.controller.DetailFormController">
+   <children>
+      <AnchorPane fx:id="detailSubPane" layoutX="15.0" layoutY="17.0" prefHeight="650.0" prefWidth="722.0" style="-fx-background-radius: 10;" stylesheets="@../assests/style/detail.css">
+         <children>
+            <TextField fx:id="txtDid" layoutX="138.0" layoutY="70.0" prefHeight="30.0" prefWidth="416.0" promptText="DATE ID" />
+            <DatePicker fx:id="txtSdate" layoutX="307.0" layoutY="120.0" prefHeight="30.0" prefWidth="199.0" />
+            <DatePicker fx:id="txtLastDate" layoutX="308.0" layoutY="169.0" prefHeight="30.0" prefWidth="199.0" />
+            <Label layoutX="186.0" layoutY="128.0" prefHeight="20.0" prefWidth="94.0" text="GET DATE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="186.0" layoutY="177.0" prefHeight="18.0" prefWidth="105.0" text="LAST DATE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbuserId" layoutX="376.0" layoutY="222.0" prefHeight="30.0" prefWidth="178.0" promptText="USER ID" />
+            <ComboBox fx:id="cmbBookId" layoutX="138.0" layoutY="222.0" prefHeight="30.0" prefWidth="178.0" promptText="BOOK ID" />
+            <Button fx:id="btnsave" layoutX="207.0" layoutY="273.0" mnemonicParsing="false" onAction="#save_OnAction" prefHeight="26.0" prefWidth="78.0" text="SAVE" textFill="WHITE" />
+            <Button fx:id="btnupdate" layoutX="307.0" layoutY="273.0" mnemonicParsing="false" onAction="#update_OnAction" prefHeight="26.0" prefWidth="78.0" text="UPDATE" textFill="WHITE" />
+            <Button fx:id="btndelete" layoutX="407.0" layoutY="273.0" mnemonicParsing="false" onAction="#deleteOn_Action" prefHeight="26.0" prefWidth="78.0" text="DELETE" textFill="WHITE" />
+            <TableView fx:id="tblMian" layoutX="14.0" layoutY="329.0" prefHeight="307.0" prefWidth="695.0">
+              <columns>
+                <TableColumn fx:id="tblDid" prefWidth="101.0" text="DID" />
+                <TableColumn fx:id="tblSdate" prefWidth="162.0" text="START DATE" />
+                  <TableColumn fx:id="tblLdate" prefWidth="172.0" text="LAST DATE" />
+                  <TableColumn fx:id="tblUserId" prefWidth="128.0" text="USER ID" />
+                  <TableColumn fx:id="tblBookId" prefWidth="125.0" text="BOOK ID" />
+              </columns>
+            </TableView>
+            <Label layoutX="332.0" layoutY="20.0" text="DETAIL" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

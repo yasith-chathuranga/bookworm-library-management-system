@@ -1,0 +1,16 @@
+#userPane{
+    -fx-background-color: #191ba9;
+}
+#subPain{
+    -fx-background-color: #3c3939;
+    -fx-background-radius: 7px 0 0 7px;
+}
+#btnCreate{
+    -fx-background-color: rgb(128, 128, 128);
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+#btnCreate:hover{
+    -fx-effect:  dropshadow(three-pass-box, rgb(0, 0, 0),10,0,0,0);
+}

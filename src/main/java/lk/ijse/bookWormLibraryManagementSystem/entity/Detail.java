@@ -1,57 +1,73 @@
 package lk.ijse.bookWormLibraryManagementSystem.entity;
 
-import lombok.Getter;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.util.Date;
 
-@Getter
 @Entity
 public class Detail {
-    @Id
-    private  String dId;
-    private Date sDate;
-    private Date eDate;
+  @Id
+  private  String dId;
+  private Date sDate;
+  private Date eDate;
+  @ManyToOne
+  @JoinColumn(name = "user_id")
+  private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+  public Detail(String dId, Date sDate, Date eDate, User user, Book book) {
+    this.setdId(dId);
+    this.setsDate(sDate);
+    this.seteDate(eDate);
+    this.setUser(user);
+    this.setBook(book);
+  }
 
-    @ManyToOne
-    @JoinColumn(name = "bId")
-    private Book book;
+  @ManyToOne
+  @JoinColumn(name = "bId")
+  private Book book;
 
-    public Detail() {
-    }
+  public Detail() {
+  }
 
-    public Detail(String dId, Date sDate, Date eDate, User user, Book book) {
-        this.dId = dId;
-        this.sDate = sDate;
-        this.eDate = eDate;
-        this.user = user;
-        this.book = book;
-    }
+  public String getdId() {
+    return dId;
+  }
 
-    public void setdId(String dId) {
-        this.dId = dId;
-    }
+  public void setdId(String dId) {
+    this.dId = dId;
+  }
 
-    public void setsDate(Date sDate) {
-        this.sDate = sDate;
-    }
+  public Date getsDate() {
+    return sDate;
+  }
 
-    public void seteDate(Date eDate) {
-        this.eDate = eDate;
-    }
+  public void setsDate(Date sDate) {
+    this.sDate = sDate;
+  }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+  public Date geteDate() {
+    return eDate;
+  }
 
-    public void setBook(Book book) {
-        this.book = book;
-    }
+  public void seteDate(Date eDate) {
+    this.eDate = eDate;
+  }
+
+  public User getUser() {
+    return user;
+  }
+
+  public void setUser(User user) {
+    this.user = user;
+  }
+
+  public Book getBook() {
+    return book;
+  }
+
+  public void setBook(Book book) {
+    this.book = book;
+  }
 }

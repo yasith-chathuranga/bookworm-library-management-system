@@ -1,44 +1,60 @@
 package lk.ijse.bookWormLibraryManagementSystem.entity;
 
-import lombok.Getter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Getter
 @Entity
 @Table(name = "branches")
 public class Branches {
     @Id
     private String brId;
-    private String bName;
+    private String bname;
+
     private String location;
-    private String status;
 
     public Branches() {
     }
 
-    public Branches(String brId, String bName, String location, String status) {
-        this.brId = brId;
-        this.bName = bName;
-        this.location = location;
-        this.status = status;
+    public Branches(String brId, String bname, String location, String bstatus) {
+        this.setBrId(brId);
+        this.setBname(bname);
+        this.setLocation(location);
+        this.setBstatus(bstatus);
+    }
+
+    private String bstatus;
+
+    public String getBrId() {
+        return brId;
     }
 
     public void setBrId(String brId) {
         this.brId = brId;
     }
 
-    public void setbName(String bName) {
-        this.bName = bName;
+    public String getBname() {
+        return bname;
+    }
+
+    public void setBname(String bname) {
+        this.bname = bname;
+    }
+
+    public String getLocation() {
+        return location;
     }
 
     public void setLocation(String location) {
         this.location = location;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public String getBstatus() {
+        return bstatus;
+    }
+
+    public void setBstatus(String bstatus) {
+        this.bstatus = bstatus;
     }
 }

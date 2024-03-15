@@ -1,50 +1,52 @@
 package lk.ijse.bookWormLibraryManagementSystem.entity;
 
-import lombok.Getter;
-
 import javax.persistence.*;
 import java.util.List;
 
-@Getter
 @Entity
 public class User {
 
     @Id
-    @Column(name = "user_id", length = 20)
+    @Column(name = "user_id",length = 20)
     private String userId;
-
-    @Column(name = "username")
+    @Column(name = "userName")
     private String userName;
-
     @Column(name = "password")
-    private String password;
+    private String Password;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "user")
     private List<Detail> detailList;
 
     public User() {
     }
-
-    public User(String userId, String userName, String password, List<Detail> detailList) {
+    public User(String userId, String userName, String password) {
         this.userId = userId;
         this.userName = userName;
-        this.password = password;
-        this.detailList = detailList;
+        Password = password;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+
+    public String getUserName() {
+        return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String getPassword() {
+        return Password;
     }
 
-    public void setDetailList(List<Detail> detailList) {
-        this.detailList = detailList;
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }
